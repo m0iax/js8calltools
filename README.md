@@ -22,20 +22,6 @@ pip3 install gps
 pip3 install maidenhead
 
 
-Download the zip file
-
-wget http://m0iax.com/downloads/js8calltools.zip
-
-Next Unzip the files to your home directory
-
-Command line
-
-unzip js8calltoolz.zip
-
-In the command line type
-
-cd ~/js8calltools
-
 chmod +x js8callgpsUI.py
 
 Finally to run the software enter this command:

@@ -19,6 +19,7 @@ Open a terminal window and enter the following commands:
 sudo apt-get install python3
 
 pip3 install gps
+
 pip3 install maidenhead
 
 

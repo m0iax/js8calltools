@@ -62,18 +62,25 @@ class GpsListener(threading.Thread):
 
                 data = self.session.next()
                 if data['class'] == 'TPV':
+                    
                     lat= getattr(data,'lat',0.0)
                     lon = getattr(data, 'lon', 0.0)
 #            
                     gpstime = getattr(data,'time', 0)
-#            
-                    grid = mh.toMaiden(lat, lon, 4)
-                    
-                    self.current_lat = lat
-                    self.current_lon = lon
-                    self.current_gpstime = gpstime
-                    self.current_mhgrid = grid
-                    currentMHGrid = grid
+#
+                    if gpstime=="0":
+                        self.currentmhgrid="No Fix"
+                    else:
+                        latlon = (lat,lon)
+                        
+                        grid = mh.toMaiden(lat, lon, precision=4)
+                        
+                        #grid = mh.toMaiden(lat, lon, 4)
+                        self.current_lat = lat
+                        self.current_lon = lon
+                        self.current_gpstime = gpstime
+                        self.current_mhgrid = grid
+                        currentMHGrid = grid
                 
                 time.sleep(1)
                 

@@ -28,6 +28,6 @@ def getAttribute(sectionName, attributeName):
         
     return attr
 
-configfilename="./settings.gfg"
+configfilename="./settings.cfg"
 #create the config file on load if it does not already exist
 createConfigFile(configfilename)

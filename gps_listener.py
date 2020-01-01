@@ -72,7 +72,7 @@ class GpsListener(threading.Thread):
                         self.currentmhgrid="No Fix"
                     else:
                         latlon = (lat,lon)
-                        
+                       
                         grid = mh.toMaiden(lat, lon, precision=4)
                         
                         #grid = mh.toMaiden(lat, lon, 4)

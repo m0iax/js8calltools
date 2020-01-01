@@ -10,10 +10,13 @@ import tkinter as tk
 from tkinter import StringVar
 import socket, time, json
 import gps_listener as gpsl
+import configAndSettings
+
 HEIGHT=500
 WIDTH=500
-JS8CALL_IPADDRESS='127.0.0.1'
-JS8CALL_PORT=2237
+JS8CALL_IPADDRESS=configAndSettings.getAttribute("JS8CALLSERVER", "serverip")
+JS8CALL_PORT=configAndSettings.getAttribute("JS8CALLSERVER", "serverport")
+
 SERIAL_ENABLED=False
 TYPE_STATION_SETGRID='STATION.SET_GRID'
 TYPE_TX_GRID='TX.SEND_MESSAGE'

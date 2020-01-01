@@ -28,3 +28,9 @@ chmod +x js8callgpsUI.py
 Finally to run the software enter this command:
 
 ./js8callgpsUI.py
+
+PLEASE NOTE:
+
+JS8Call verison 2 has changed the default UDP port to 2242. This software now creates a settings text file settings.cfg 
+Please ensure you either updste the port number in the settings file or change your JS8Call settings to use port 2242
+

@@ -15,7 +15,7 @@ import configAndSettings
 HEIGHT=500
 WIDTH=500
 JS8CALL_IPADDRESS=configAndSettings.getAttribute("JS8CALLSERVER", "serverip")
-JS8CALL_PORT=configAndSettings.getAttribute("JS8CALLSERVER", "serverport")
+JS8CALL_PORT=int(configAndSettings.getAttribute("JS8CALLSERVER", "serverport"))
 
 SERIAL_ENABLED=False
 TYPE_STATION_SETGRID='STATION.SET_GRID'
